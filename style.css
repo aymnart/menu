@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+:root{
+  --pri-color: #686868;
+  --sec-color: #fcfcfc;
+  --ter-color: #545b70;
+  font-size: 14px;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+html{
+  font-size: 12pt;
+  font-family:Poppins, Segoe UI, Tahoma, sans-serif;
+  color: black;
+}
+body{
+  background-color: var(--sec-color);
+  
+}
+nav{
+  height: 5rem;
+  background-color: white;
+  display: flex;
+  justify-content: space-around;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: nowrap;
+  box-shadow:  0px 0px 2rem 1rem #9b9b9b3b;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 10;
+
+}
+
+.nav-item{
+  padding: 0 2rem;
+  justify-content: space-around;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  margin: 0.5rem auto;
+  height: 6rem;
+  width: 80%;
+  background-color: white;
+  box-shadow: 0 0 1px 1px var(--ter-color);
+}
+nav a{
+  height: 100%;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+  margin-left: 1rem;
+  width: 100%;
+  font-size: 1.08rem;
+
+}
+
+nav .home-link{
+  margin-right: auto;
+  margin-left: 1.618rem;
+  text-wrap: balance;
+  text-transform: capitalize;
+  line-height: 2rem;
+  font-size: 1.7rem;
+}
+svg{
+  fill: black;
+}
+#sidebar-active{
+  display: none;
+}
+
+
+  .links-container{
+    flex-direction: column;
+    align-items: flex-start;
+    position: fixed;
+    gap: .5rem;
+    right: -100%;
+    top: 0;
+    z-index: 100;
+    width: 80%;
+    background-color: var(--sec-color);
+    transition: 0.6s ease-out;
+    height: 100%;
+    display: flex;
+  }
+
+  nav img{
+    height: 3rem;
+    width: 3rem;
+    margin-right: 1rem;
+  }
+  .open-sidebar-button, .close-sidebar-button{
+    display: block;
+    margin-left: auto;
+  }
+  .open-sidebar-button{
+    padding: 1.618rem;
+  }
+  #sidebar-active:checked ~ .links-container{
+    right: 0;
+    top: 0;
+  }
+  #sidebar-active:checked ~ #overlay{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9;
+    background-color: var(--pri-color);
+    filter: opacity(0.3);
+    transition: background-color 0.618s ease-in-out;
+  }
+
+  .links-container-top{
+    display: flex;
+    width: 85%;
+    align-items: center;
+    margin: 1.618rem auto;
+    margin-top: 2.3rem;
+    font-size: larger;
+  }
+  hr{
+    border: 1px dashed var(--ter-color);
+    opacity: 0.6;
+    width: 85%;
+    margin: auto;
+  }
+/**** icons *****/
+
+.gg-chevron-right {
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  transform: scale(var(--ggs, 0.7));
+  width: 22px;
+  height: 22px;
+  border: 2px solid transparent;
+  border-radius: 100px;
+}
+.gg-chevron-right::after {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-bottom: 2px solid;
+  border-right: 2px solid;
+  transform: rotate(-45deg);
+  right: 6px;
+  top: 4px;
+}
+/**/
+.gg-close {
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  transform: scale(var(--ggs, 1.3));
+  width: 22px;
+  height: 22px;
+  border: 2px solid transparent;
+  border-radius: 40px;
+}
+.gg-close::after,
+.gg-close::before {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+  width: 16px;
+  height: 2px;
+  background: currentColor;
+  transform: rotate(45deg);
+  border-radius: 5px;
+  top: 8px;
+  left: 1px;
+}
+.gg-close::after {
+  transform: rotate(-45deg);
+}
+/***/
+.gg-menu {
+  transform: scale(var(--ggs, 1.3));
+}
+.gg-menu,
+.gg-menu::after,
+.gg-menu::before {
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  width: 20px;
+  height: 2px;
+  border-radius: 3px;
+  background: currentColor;
+}
+.gg-menu::after,
+.gg-menu::before {
+  content: "";
+  position: absolute;
+  top: -6px;
+}
+.gg-menu::after {
+  top: 6px;
+}
