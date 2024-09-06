@@ -18,6 +18,7 @@ html{
 }
 body{
   background-color: var(--sec-color);
+  background-color: red;
   
 }
 nav{
@@ -64,10 +65,11 @@ nav a{
 nav .home-link{
   margin-right: auto;
   margin-left: 1.618rem;
-  text-wrap: balance;
+  text-wrap: pretty;
   text-transform: capitalize;
   line-height: 2rem;
   font-size: 1.7rem;
+  font-weight: 800;
 }
 svg{
   fill: black;
